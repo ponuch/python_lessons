@@ -17,4 +17,6 @@ x = 1; y = 1; z = 0
 printTable(x, y, z)
 x = 0; y = 1; z = 0
 printTable(x, y, z)
+x = 1; y = 0; z = 1
+printTable(x, y, z)
 
