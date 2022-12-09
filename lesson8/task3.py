@@ -36,13 +36,14 @@ res = [x for y in arr for x in y] # превращаем двумерный сп
 
 sums = []
 
-for idx in range(len(res)):
+for idx in range(0, len(res), 7):
     rng = res[idx:idx + 6]
     local_sum = 0
     for item in rng:
         local_sum += item.temperature
     
     sums.append(PeriodDesc(local_sum, rng[0].month, rng[0].day, rng[-1].month, rng[-1].day))
+    
     
 min_period = min(sums, key=attrgetter('temperature'))
 max_period = max(sums, key=attrgetter('temperature'))
